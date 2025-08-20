@@ -1,0 +1,119 @@
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.csproj.AssemblyReference.cache
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.GeneratedMSBuildEditorConfig.editorconfig
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.AssemblyInfoInputs.cache
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.AssemblyInfo.cs
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.csproj.CoreCompileInputs.cache
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.exe
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.deps.json
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.runtimeconfig.json
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.pdb
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\CommandLine.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\DynamicData.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\FluentResults.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.Common.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.RegistryUtils.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.StoreHandlers.GOG.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.StoreHandlers.Steam.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.StoreHandlers.Xbox.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.Wine.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\INIFileParser.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\K4os.Compression.LZ4.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\K4os.Compression.LZ4.Streams.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\K4os.Hash.xxHash.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Loqui.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Microsoft.Bcl.AsyncInterfaces.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Microsoft.Extensions.Logging.Abstractions.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\miniball.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Mutagen.Bethesda.Core.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Mutagen.Bethesda.Json.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Mutagen.Bethesda.Kernel.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Mutagen.Bethesda.Skyrim.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Mutagen.Bethesda.Synthesis.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Newtonsoft.Json.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\NexusMods.Paths.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\NiflySharp.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Noggog.CSharpExt.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Noggog.SourceGenerators.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\OneOf.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Reloaded.Memory.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\ICSharpCode.SharpZipLib.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\StrongInject.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Synthesis.Bethesda.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.Collections.Immutable.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.IO.Abstractions.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.IO.Pipelines.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.Linq.Async.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.Reactive.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.Text.Encoding.CodePages.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\TestableIO.System.IO.Abstractions.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\TestableIO.System.IO.Abstractions.Wrappers.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Testably.Abstractions.FileSystem.Interface.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\ValveKeyValue.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-Hi.56CB2044.Up2Date
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\refint\Bijin-HighPolyHead-PhysicsHair.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.pdb
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.genruntimeconfig.cache
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin - High Poly Head - Physics Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\ref\Bijin-HighPolyHead-PhysicsHair.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.exe
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.deps.json
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.runtimeconfig.json
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.pdb
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\CommandLine.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\DynamicData.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\FluentResults.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.Common.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.RegistryUtils.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.StoreHandlers.GOG.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.StoreHandlers.Steam.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.StoreHandlers.Xbox.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\GameFinder.Wine.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\INIFileParser.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\K4os.Compression.LZ4.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\K4os.Compression.LZ4.Streams.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\K4os.Hash.xxHash.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Loqui.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Microsoft.Bcl.AsyncInterfaces.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Microsoft.Extensions.Logging.Abstractions.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\miniball.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Mutagen.Bethesda.Core.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Mutagen.Bethesda.Json.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Mutagen.Bethesda.Kernel.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Mutagen.Bethesda.Skyrim.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Mutagen.Bethesda.Synthesis.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Newtonsoft.Json.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\NexusMods.Paths.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\NiflySharp.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Noggog.CSharpExt.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Noggog.SourceGenerators.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\OneOf.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Reloaded.Memory.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\ICSharpCode.SharpZipLib.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\StrongInject.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Synthesis.Bethesda.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.Collections.Immutable.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.IO.Abstractions.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.IO.Pipelines.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.Linq.Async.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.Reactive.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\System.Text.Encoding.CodePages.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\TestableIO.System.IO.Abstractions.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\TestableIO.System.IO.Abstractions.Wrappers.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\Testably.Abstractions.FileSystem.Interface.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\bin\Release\net8.0\win-x64\ValveKeyValue.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.csproj.AssemblyReference.cache
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.GeneratedMSBuildEditorConfig.editorconfig
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.AssemblyInfoInputs.cache
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.AssemblyInfo.cs
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.csproj.CoreCompileInputs.cache
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.sourcelink.json
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-Hi.56CB2044.Up2Date
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\refint\Bijin-HighPolyHead-PhysicsHair.dll
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.pdb
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\Bijin-HighPolyHead-PhysicsHair.genruntimeconfig.cache
+D:\game\Mod.Organizer-2.5.2\plugins\tools\Bijin-High-Poly-Head-Physics-Hair\Bijin-HighPolyHead-PhysicsHair\obj\Release\net8.0\win-x64\ref\Bijin-HighPolyHead-PhysicsHair.dll
