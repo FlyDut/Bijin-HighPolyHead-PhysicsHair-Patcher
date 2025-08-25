@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bijin-HighPolyHead-PhysicsHair")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd69fffc4d3286c8cb903bf4a16ee1d01a7f3db1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1af4e6f053b190a666b1256d1b6f86eb093f260")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bijin-HighPolyHead-PhysicsHair")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bijin-HighPolyHead-PhysicsHair")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
