@@ -1,4 +1,5 @@
 using Mutagen.Bethesda.Synthesis.Settings;
+using static BijinAIOPathcer.Constants;
 
 namespace BijinAIOPathcer.Settings
 {
@@ -20,7 +21,21 @@ namespace BijinAIOPathcer.Settings
 
         [SynthesisTooltip("When you do not check this option, it will use the color of the \"Hi babe\" hairstyle by default.")]
         [SynthesisDescription("When you do not check this option, it will use the color of the \"Hi babe\" hairstyle by default.")]
-        public bool AdrianneUseVanillaColor { get; set; } = false;
+        public AdrianneOption Adrianne = new();
+
+        public ValericaOption Valerica = new();
+    }
+
+    public class AdrianneOption
+    {
+        public AdrianneHairColor HairColor { get; set; }
+
+}
+
+    public class ValericaOption
+    {
+        public ValericaHairColor HairColor { get; set; }
+
     }
 }
 

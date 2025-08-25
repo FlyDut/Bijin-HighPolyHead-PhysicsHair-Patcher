@@ -1,4 +1,7 @@
+using Mutagen.Bethesda.Plugins;
+using Mutagen.Bethesda.Skyrim;
 using NiflySharp;
+using Noggog;
 
 namespace BijinAIOPathcer
 {
@@ -15,5 +18,22 @@ namespace BijinAIOPathcer
         };
 
         public static string BasePath { get; set; } = "";
+
+        public static FormLinkNullable<IRaceGetter> defaultRace = new();
+
+        public static ExtendedList<FormLink<IRaceGetter>> additionalRaces = [];
+
+        public enum ValericaHairColor
+        {
+            Black,
+            Gery,
+            WineRed,
+        }
+
+        public enum AdrianneHairColor
+        {
+            Hibabe,
+            VanillaBased
+        }
     }
 }

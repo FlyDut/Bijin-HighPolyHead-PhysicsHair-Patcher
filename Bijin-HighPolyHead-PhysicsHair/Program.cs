@@ -24,23 +24,60 @@ namespace BijinAIOPathcer
 
         public static void RunPatch(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)
         {
-
-            var sourcePluginName = "Bijin AIO.esp";
-            var sourceModKey = ModKey.FromNameAndExtension(sourcePluginName);
             Constants.BasePath = state.DataFolderPath + "\\meshes\\";
+
+
+
+            string sourcePluginName = "Bijin AIO.esp";
+            ModKey sourceModKey = ModKey.FromNameAndExtension(sourcePluginName);
 
             if (settings.Value.HighPolyHeadOutput.Equals("") && settings.Value.UseYourSkin)
             {
                 throw new ArgumentException("When enabled \"Use Your Skin\". You must specify a High Poly Head Output path to export");
             }
-            if (state.LoadOrder.TryGetValue(sourceModKey) is not { Mod: not null } sourceMod)
+            if (state.LoadOrder.TryGetValue(sourceModKey) is { Mod: not null } sourceMod)
             {
-                throw new ArgumentException($"Could not find{sourcePluginName}. Make sure Bijin Fixes (AIO or Separate) is installed.");
+                ModKey skyrimModKey = ModKey.FromNameAndExtension("Skyrim.esm");
+                ExtendedList<FormLink<IRaceGetter>> additionalRaces = [];
+                foreach (uint key in Constants.AdditionalRaceIds)
+                {
+                    Constants.additionalRaces.Add(new FormLink<IRaceGetter>(new FormKey(skyrimModKey, key)));
+                }
+                Constants.defaultRace = new FormLinkNullable<IRaceGetter>(new FormKey(skyrimModKey, 0x000019));
+
+                NpcPatcher.Apply(state, sourceMod.Mod);
+                HeadPartPatcher.Apply(state, sourceMod.Mod);
+                BodyMeshPatcher.Apply(state, sourceMod.Mod);
+                TextureSetPatcher.Apply(state, sourceMod.Mod);
             }
-            NpcPatcher.Apply(state, sourceMod.Mod);
-            HeadPartPatcher.Apply(state, sourceMod.Mod);
-            BodyMeshPatcher.Apply(state, sourceMod.Mod);
-            TextureSetPatcher.Apply(state, sourceMod.Mod);
+            
+
+
+
+            string valericaPluginName = "Valerica.esp";
+            ModKey valericaModKey = ModKey.FromNameAndExtension(valericaPluginName);
+            if (state.LoadOrder.TryGetValue(valericaModKey) is { Mod: not null } valericaMod)
+            {
+                ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache = valericaMod.Mod.ToImmutableLinkCache();
+                NpcPatcher.ApplyValerica(state, cache);
+                HeadPartPatcher.ApplyValerica(state, cache);
+                BodyMeshPatcher.ApplyValerica(state, cache);
+                TextureSetPatcher.ApplyValerica(state, cache);
+            }
+
+
+
+
+            string SeranaPluginName = "Serana.esp";
+            ModKey SeranaModKey = ModKey.FromNameAndExtension(SeranaPluginName);
+            if (state.LoadOrder.TryGetValue(SeranaModKey) is { Mod: not null } SeranaMod)
+            {
+                ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache = SeranaMod.Mod.ToImmutableLinkCache();
+                NpcPatcher.ApplySerana(state, cache);
+                HeadPartPatcher.ApplySerana(state, cache);
+                BodyMeshPatcher.ApplySerana(state, cache);
+                TextureSetPatcher.ApplySerana(state, cache);
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bijin-HighPolyHead-PhysicsHair")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccd9af4be48e3a7f0d9f7181b7bda8d9a61600ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d2913ac22ea1b2ae6fe99e025faa10fefd1ed4d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bijin-HighPolyHead-PhysicsHair")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bijin-HighPolyHead-PhysicsHair")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
