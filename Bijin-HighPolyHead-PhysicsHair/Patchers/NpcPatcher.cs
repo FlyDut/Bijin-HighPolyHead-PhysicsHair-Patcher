@@ -53,6 +53,9 @@ namespace BijinAIOPathcer.Patchers
 
                     Model nif = new();
                     string FilePath = "actors\\character\\" + npcName + "\\hair\\" + npcName + "Hair_1.nif";
+                    if (npcName == "IdgrodTY"){
+                        FilePath = "actors\\character\\Idgrod the younger\\hair\\Idgrod the younger hair_1.nif";
+                    }
                     if (File.Exists(Constants.BasePath + FilePath))
                     {
                         nif.File = FilePath;
