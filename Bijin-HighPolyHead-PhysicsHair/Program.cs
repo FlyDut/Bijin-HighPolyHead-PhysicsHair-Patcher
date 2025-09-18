@@ -40,7 +40,7 @@ namespace BijinAIOPathcer
             else if (!settings.Value.UseYourSkin && settings.Value.UseYourSkinNormalMap)
             {
                 Console.WriteLine("\n================== Notice ===================\n");
-                throw new ArgumentException("When enabled \"Use Your Skin Norma lMap\". You must enable \"Use Your Skin\".");
+                throw new ArgumentException("When enabled \"Use Your Skin Normal Map\". You must enable \"Use Your Skin\".");
                 Console.WriteLine("\n");
             }
             if (state.LoadOrder.TryGetValue(sourceModKey) is { Mod: not null } sourceMod)
@@ -57,6 +57,10 @@ namespace BijinAIOPathcer
                 HeadPartPatcher.Apply(state, sourceMod.Mod);
                 BodyMeshPatcher.Apply(state, sourceMod.Mod);
                 TextureSetPatcher.Apply(state, sourceMod.Mod);
+            }else{
+                Console.WriteLine("\n================== Notice ===================\n");
+                throw new ArgumentException("Bijin AIO.esp was not found. Please confirm that Bijin Fixes (AIO or Separate) has been installed, and ensure that the corresponding esp is loaded.");
+                Console.WriteLine("\n");
             }
             
 
@@ -71,6 +75,10 @@ namespace BijinAIOPathcer
                 HeadPartPatcher.ApplyValerica(state, cache);
                 BodyMeshPatcher.ApplyValerica(state, cache);
                 TextureSetPatcher.ApplyValerica(state, cache);
+            }else{
+                Console.WriteLine("\n================== Notice ===================\n");
+                throw new ArgumentException("Valerica.esp was not found. Please confirm that Bijin Fixes (AIO or Separate) has been installed, and ensure that the corresponding esp is loaded.");
+                Console.WriteLine("\n");
             }
 
 
@@ -85,6 +93,10 @@ namespace BijinAIOPathcer
                 HeadPartPatcher.ApplySerana(state, cache);
                 BodyMeshPatcher.ApplySerana(state, cache);
                 TextureSetPatcher.ApplySerana(state, cache);
+            }else{
+                Console.WriteLine("\n================== Notice ===================\n");
+                throw new ArgumentException("Serana.esp was not found. Please confirm that Bijin Fixes (AIO or Separate) has been installed, and ensure that the corresponding esp is loaded.");
+                Console.WriteLine("\n");
             }
         }
     }
