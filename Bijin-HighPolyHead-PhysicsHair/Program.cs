@@ -31,9 +31,17 @@ namespace BijinAIOPathcer
             string sourcePluginName = "Bijin AIO.esp";
             ModKey sourceModKey = ModKey.FromNameAndExtension(sourcePluginName);
 
-            if (settings.Value.HighPolyHeadOutput.Equals("") && settings.Value.UseYourSkin)
+            if (settings.Value.HeadMeshOutput.Equals("") && settings.Value.UseYourSkin)
             {
-                throw new ArgumentException("When enabled \"Use Your Skin\". You must specify a High Poly Head Output path to export");
+                Console.WriteLine("\n================== Notice ===================\n");
+                throw new ArgumentException("When enabled \"Use Your Skin\". You must specify a High Mesh Output path to export");
+                Console.WriteLine("\n");
+            }
+            else if (!settings.Value.UseYourSkin && settings.Value.UseYourSkinNormalMap)
+            {
+                Console.WriteLine("\n================== Notice ===================\n");
+                throw new ArgumentException("When enabled \"Use Your Skin Norma lMap\". You must enable \"Use Your Skin\".");
+                Console.WriteLine("\n");
             }
             if (state.LoadOrder.TryGetValue(sourceModKey) is { Mod: not null } sourceMod)
             {

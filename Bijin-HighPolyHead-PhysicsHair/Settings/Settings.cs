@@ -15,9 +15,9 @@ namespace BijinAIOPathcer.Settings
         [SynthesisDescription("Use Your Skin Normal Map: Effective when Use Your Skin is enabled")]
         public bool UseYourSkinNormalMap { get; set; } = false;
         
-        [SynthesisTooltip("High Poly Head Output: Effective when UseYourSkin is enabled, it modifies FaceGen to match your skin textures.")]
-        [SynthesisDescription("High Poly Head Output: Effective when UseYourSkin is enabled, it modifies FaceGen to match your skin textures.")]
-        public string HighPolyHeadOutput { get; set; } = "";
+        [SynthesisTooltip("Head Mesh Output: Effective when UseYourSkin is enabled, it modifies FaceGen to match your skin textures.")]
+        [SynthesisDescription("Head Mesh Output: Effective when UseYourSkin is enabled, it modifies FaceGen to match your skin textures.")]
+        public string HeadMeshOutput { get; set; } = "";
 
         [SynthesisTooltip("When you do not check this option, it will use the color of the \"Hi babe\" hairstyle by default.")]
         [SynthesisDescription("When you do not check this option, it will use the color of the \"Hi babe\" hairstyle by default.")]
