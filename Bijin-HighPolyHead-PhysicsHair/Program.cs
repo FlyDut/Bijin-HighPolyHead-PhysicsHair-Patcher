@@ -75,10 +75,6 @@ namespace BijinAIOPathcer
                 HeadPartPatcher.ApplyValerica(state, cache);
                 BodyMeshPatcher.ApplyValerica(state, cache);
                 TextureSetPatcher.ApplyValerica(state, cache);
-            }else{
-                Console.WriteLine("\n================== Notice ===================\n");
-                throw new ArgumentException("Valerica.esp was not found. Please confirm that Bijin Fixes (AIO or Separate) has been installed, and ensure that the corresponding esp is loaded.");
-                Console.WriteLine("\n");
             }
 
 
@@ -93,10 +89,6 @@ namespace BijinAIOPathcer
                 HeadPartPatcher.ApplySerana(state, cache);
                 BodyMeshPatcher.ApplySerana(state, cache);
                 TextureSetPatcher.ApplySerana(state, cache);
-            }else{
-                Console.WriteLine("\n================== Notice ===================\n");
-                throw new ArgumentException("Serana.esp was not found. Please confirm that Bijin Fixes (AIO or Separate) has been installed, and ensure that the corresponding esp is loaded.");
-                Console.WriteLine("\n");
             }
         }
     }
