@@ -43,6 +43,7 @@ namespace BijinAIOPathcer
                 throw new ArgumentException("When enabled \"Use Your Skin Normal Map\". You must enable \"Use Your Skin\".");
                 Console.WriteLine("\n");
             }
+            var linkCacheConnectedToLoadOrder = state.LoadOrder.ToImmutableLinkCache();
             if (state.LoadOrder.TryGetValue(sourceModKey) is { Mod: not null } sourceMod)
             {
                 ModKey skyrimModKey = ModKey.FromNameAndExtension("Skyrim.esm");
@@ -53,7 +54,7 @@ namespace BijinAIOPathcer
                 }
                 Constants.defaultRace = new FormLinkNullable<IRaceGetter>(new FormKey(skyrimModKey, 0x000019));
 
-                NpcPatcher.Apply(state, sourceMod.Mod);
+                NpcPatcher.Apply(state, linkCacheConnectedToLoadOrder, sourceMod.Mod);
                 HeadPartPatcher.Apply(state, sourceMod.Mod);
                 BodyMeshPatcher.Apply(state, sourceMod.Mod);
                 TextureSetPatcher.Apply(state, sourceMod.Mod);
@@ -71,7 +72,7 @@ namespace BijinAIOPathcer
             if (state.LoadOrder.TryGetValue(valericaModKey) is { Mod: not null } valericaMod)
             {
                 ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache = valericaMod.Mod.ToImmutableLinkCache();
-                NpcPatcher.ApplyValerica(state, cache);
+                NpcPatcher.ApplyValerica(state, linkCacheConnectedToLoadOrder, cache);
                 HeadPartPatcher.ApplyValerica(state, cache);
                 BodyMeshPatcher.ApplyValerica(state, cache);
                 TextureSetPatcher.ApplyValerica(state, cache);
@@ -85,7 +86,7 @@ namespace BijinAIOPathcer
             if (state.LoadOrder.TryGetValue(SeranaModKey) is { Mod: not null } SeranaMod)
             {
                 ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache = SeranaMod.Mod.ToImmutableLinkCache();
-                NpcPatcher.ApplySerana(state, cache);
+                NpcPatcher.ApplySerana(state, linkCacheConnectedToLoadOrder, cache);
                 HeadPartPatcher.ApplySerana(state, cache);
                 BodyMeshPatcher.ApplySerana(state, cache);
                 TextureSetPatcher.ApplySerana(state, cache);

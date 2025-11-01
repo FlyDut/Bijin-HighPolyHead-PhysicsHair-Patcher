@@ -3,6 +3,7 @@ using Mutagen.Bethesda;
 using Mutagen.Bethesda.Plugins;
 using Mutagen.Bethesda.Plugins.Cache;
 using Mutagen.Bethesda.Plugins.Cache.Internals.Implementations;
+using Mutagen.Bethesda.Plugins.Order;
 using Mutagen.Bethesda.Plugins.Records;
 using Mutagen.Bethesda.Skyrim;
 using Mutagen.Bethesda.Synthesis;
@@ -15,7 +16,7 @@ namespace BijinAIOPathcer.Patchers
 {
     public static class NpcPatcher
     {
-        public static void Apply(IPatcherState<ISkyrimMod, ISkyrimModGetter> state, ISkyrimModGetter mod)
+        public static void Apply(IPatcherState<ISkyrimMod, ISkyrimModGetter> state, ImmutableLoadOrderLinkCache<ISkyrimMod, ISkyrimModGetter> linkCacheConnectedToLoadOrder, ISkyrimModGetter mod)
         {
             ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache = mod.ToImmutableLinkCache();
             HashSet<string> handledNpc = [];
@@ -35,6 +36,7 @@ namespace BijinAIOPathcer.Patchers
                     continue;
                 }
 
+                
                 string npcName = context.EditorID!.Replace("BodyArmor", "");
                 if (!handledNpc.Contains(npcName))
                 {
@@ -123,36 +125,42 @@ namespace BijinAIOPathcer.Patchers
                         nifFile.Save(path, Constants.SaveOptions);
                     }
 
-
-                    if (npcName.Equals("Jenassa"))
-                    {
-                        Npc Adrianne = state.PatchMod.Npcs.GetOrAddAsOverride(record);
-                        Adrianne.HeadParts.Add(new FormLink<IHeadPartGetter>(new FormKey(mod.ModKey, 0x8FF)));
-                    }
-                    if (npcName.Equals("Adrianne"))
-                    {
-
-                        ColorRecord hairColor = new(state.PatchMod);
-                        hairColor.EditorID = "AdrianneHairColor";
-                        if (Program.settings.Value.Adrianne.HairColor == AdrianneHairColor.VanillaBased)
+                    if (linkCacheConnectedToLoadOrder.TryResolve(record.FormKey, out var winningRecord)){
+                        Npc winningNpc = state.PatchMod.Npcs.GetOrAddAsOverride(winningRecord);
+                        if (!winningNpc.Equals(record))
                         {
-                            hairColor.Color = ColorTranslator.FromHtml("#2f2a24");
+                            winningNpc.WornArmor = wornArmor.AsNullable();
+                            winningNpc.HeadParts.Clear();
+                            winningNpc.HeadParts.AddRange(record.HeadParts);
                         }
-                        else
+
+                        if (npcName.Equals("Jenassa"))
                         {
-                            hairColor.Color = ColorTranslator.FromHtml("#181212");
+                            winningNpc.HeadParts.Add(new FormLink<IHeadPartGetter>(new FormKey(mod.ModKey, 0x8FF)));
                         }
-                        state.PatchMod.Colors.Add(hairColor);
-                        Npc Adrianne = state.PatchMod.Npcs.GetOrAddAsOverride(record);
-                        Adrianne.HairColor = hairColor.ToNullableLink();
+                        else if (npcName.Equals("Adrianne"))
+                        {
 
+                            ColorRecord hairColor = new(state.PatchMod);
+                            hairColor.EditorID = "AdrianneHairColor";
+                            if (Program.settings.Value.Adrianne.HairColor == AdrianneHairColor.VanillaBased)
+                            {
+                                hairColor.Color = ColorTranslator.FromHtml("#2f2a24");
+                            }
+                            else
+                            {
+                                hairColor.Color = ColorTranslator.FromHtml("#181212");
+                            }
+                            state.PatchMod.Colors.Add(hairColor);
+                            winningNpc.HairColor = hairColor.ToNullableLink();
+
+                        }
                     }
-
                     handledNpc.Add(npcName);
                 }
             }
         }
-        public static void ApplyValerica(IPatcherState<ISkyrimMod, ISkyrimModGetter> state, ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache)
+        public static void ApplyValerica(IPatcherState<ISkyrimMod, ISkyrimModGetter> state, ImmutableLoadOrderLinkCache<ISkyrimMod, ISkyrimModGetter> linkCacheConnectedToLoadOrder, ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache)
         {
             if (cache.TryResolve<INpcGetter>("DLC1Valerica", out var record))
             {
@@ -202,10 +210,20 @@ namespace BijinAIOPathcer.Patchers
                 {
                     hairColor.Color = ColorTranslator.FromHtml("#101010");
                 }
-                state.PatchMod.Colors.Add(hairColor);
-                Npc Adrianne = state.PatchMod.Npcs.GetOrAddAsOverride(record);
-                Adrianne.HairColor = hairColor.ToNullableLink();
 
+                if (linkCacheConnectedToLoadOrder.TryResolve(record.FormKey, out var winningRecord))
+                {
+                    Npc winningNpc = state.PatchMod.Npcs.GetOrAddAsOverride(winningRecord);
+                    if (!winningNpc.Equals(record))
+                    {
+                        winningNpc.WornArmor = wornArmor.AsNullable();
+                        winningNpc.HeadParts.Clear();
+                        winningNpc.HeadParts.AddRange(record.HeadParts);
+                    }
+                    state.PatchMod.Colors.Add(hairColor);
+                    winningNpc.HairColor = hairColor.ToNullableLink();
+                }
+                
 
                 if (Program.settings.Value.UseHighPolyHead)
                 {
@@ -244,7 +262,7 @@ namespace BijinAIOPathcer.Patchers
             }
         }
 
-        public static void ApplySerana(IPatcherState<ISkyrimMod, ISkyrimModGetter> state, ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache)
+        public static void ApplySerana(IPatcherState<ISkyrimMod, ISkyrimModGetter> state, ImmutableLoadOrderLinkCache<ISkyrimMod, ISkyrimModGetter> linkCacheConnectedToLoadOrder, ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache)
         {
             if (cache.TryResolve<INpcGetter>("DLC1Serana", out var record))
             {
@@ -310,6 +328,16 @@ namespace BijinAIOPathcer.Patchers
                         }
                         string path = Program.settings.Value.HeadMeshOutput.TrimEnd('\\') + "\\meshes\\" + filePath;
                         nifFile.Save(path, Constants.SaveOptions);
+                    }
+                }
+                if (linkCacheConnectedToLoadOrder.TryResolve(record.FormKey, out var winningRecord))
+                {
+                    Npc winningNpc = state.PatchMod.Npcs.GetOrAddAsOverride(winningRecord);
+                    if (!winningNpc.Equals(record))
+                    {
+                        winningNpc.WornArmor = wornArmor.AsNullable();
+                        winningNpc.HeadParts.Clear();
+                        winningNpc.HeadParts.AddRange(record.HeadParts);
                     }
                 }
             }
