@@ -9,7 +9,7 @@ namespace BijinAIOPathcer.Patchers
     {
         public static void Apply(IPatcherState<ISkyrimMod, ISkyrimModGetter> state, ISkyrimModGetter mod)
         {
-            if (Program.settings.Value.UseYourSkin)
+            if (Program.settings.Value.UseYourBodySkin)
             {
                 foreach (ITextureSetGetter record in mod.TextureSets)
                 {
@@ -23,10 +23,7 @@ namespace BijinAIOPathcer.Patchers
                         item.Diffuse = "actors\\character\\female\\femalebody_1.dds";
                         item.GlowOrDetailMap = "actors\\character\\female\\femalebody_1_sk.dds";
                         item.BacklightMaskOrSpecular = "actors\\character\\female\\femalebody_1_s.dds";
-                        if (Program.settings.Value.UseYourSkinNormalMap)
-                        {
-                            item.NormalOrGloss = "actors\\character\\female\\femalebody_1_msn.dds";
-                        }
+                        item.NormalOrGloss = "actors\\character\\female\\femalebody_1_msn.dds";
                     }
                     else if (record.EditorID.Contains("HandsTex"))
                     {
@@ -34,17 +31,14 @@ namespace BijinAIOPathcer.Patchers
                         item.Diffuse = "actors\\character\\female\\femalehands_1.dds";
                         item.GlowOrDetailMap = "actors\\character\\female\\femalehands_1_sk.dds";
                         item.BacklightMaskOrSpecular = "actors\\character\\female\\femalehands_1_s.dds";
-                        if (Program.settings.Value.UseYourSkinNormalMap)
-                        {
-                            item.NormalOrGloss = "actors\\character\\female\\femalehands_1_msn.dds";
-                        }
+                        item.NormalOrGloss = "actors\\character\\female\\femalehands_1_msn.dds";
                     }
                 }
             }
         }
         public static void ApplyValerica(IPatcherState<ISkyrimMod, ISkyrimModGetter> state, ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache)
         {
-            if (Program.settings.Value.UseYourSkin)
+            if (Program.settings.Value.UseYourBodySkin)
             {
                 if (cache.TryResolve<ITextureSetGetter>("ValericaTorsoTex", out var record))
                 {
@@ -52,10 +46,7 @@ namespace BijinAIOPathcer.Patchers
                     item.Diffuse = "actors\\character\\female\\femalebody_1.dds";
                     item.GlowOrDetailMap = "actors\\character\\female\\femalebody_1_sk.dds";
                     item.BacklightMaskOrSpecular = "actors\\character\\female\\femalebody_1_s.dds";
-                    if (Program.settings.Value.UseYourSkinNormalMap)
-                    {
-                        item.NormalOrGloss = "actors\\character\\female\\femalebody_1_msn.dds";
-                    }
+                    item.NormalOrGloss = "actors\\character\\female\\femalebody_1_msn.dds";
                 }
                 if (cache.TryResolve<ITextureSetGetter>("ValericaHandsTex", out record))
                 {
@@ -63,17 +54,14 @@ namespace BijinAIOPathcer.Patchers
                     item.Diffuse = "actors\\character\\female\\femalebody_1.dds";
                     item.GlowOrDetailMap = "actors\\character\\female\\femalebody_1_sk.dds";
                     item.BacklightMaskOrSpecular = "actors\\character\\female\\femalebody_1_s.dds";
-                    if (Program.settings.Value.UseYourSkinNormalMap)
-                    {
-                        item.NormalOrGloss = "actors\\character\\female\\femalebody_1_msn.dds";
-                    }
+                    item.NormalOrGloss = "actors\\character\\female\\femalebody_1_msn.dds";
                 }
             }
         }
 
         public static void ApplySerana(IPatcherState<ISkyrimMod, ISkyrimModGetter> state, ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache)
         {
-            if (Program.settings.Value.UseYourSkin)
+            if (Program.settings.Value.UseYourBodySkin)
             {
                 if (cache.TryResolve<ITextureSetGetter>("SeranaTorsoTex", out var record))
                 {
@@ -81,10 +69,7 @@ namespace BijinAIOPathcer.Patchers
                     item.Diffuse = "actors\\character\\female\\femalebody_1.dds";
                     item.GlowOrDetailMap = "actors\\character\\female\\femalebody_1_sk.dds";
                     item.BacklightMaskOrSpecular = "actors\\character\\female\\femalebody_1_s.dds";
-                    if (Program.settings.Value.UseYourSkinNormalMap)
-                    {
-                        item.NormalOrGloss = "actors\\character\\female\\femalebody_1_msn.dds";
-                    }
+                    item.NormalOrGloss = "actors\\character\\female\\femalebody_1_msn.dds";
                 }
                 if (cache.TryResolve<ITextureSetGetter>("SeranaHandsTex", out record))
                 {
@@ -92,10 +77,7 @@ namespace BijinAIOPathcer.Patchers
                     item.Diffuse = "actors\\character\\female\\femalebody_1.dds";
                     item.GlowOrDetailMap = "actors\\character\\female\\femalebody_1_sk.dds";
                     item.BacklightMaskOrSpecular = "actors\\character\\female\\femalebody_1_s.dds";
-                    if (Program.settings.Value.UseYourSkinNormalMap)
-                    {
-                        item.NormalOrGloss = "actors\\character\\female\\femalebody_1_msn.dds";
-                    }
+                    item.NormalOrGloss = "actors\\character\\female\\femalebody_1_msn.dds";
                 }
             }
         }

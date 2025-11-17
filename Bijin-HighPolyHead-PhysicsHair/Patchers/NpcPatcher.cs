@@ -20,13 +20,7 @@ namespace BijinAIOPathcer.Patchers
         {
             ImmutableModLinkCache<ISkyrimMod, ISkyrimModGetter> cache = mod.ToImmutableLinkCache();
             HashSet<string> handledNpc = [];
-            if (!Program.settings.Value.HeadMeshOutput.Equals("") && (Program.settings.Value.UseYourSkin || Program.settings.Value.UseYourSkinNormalMap))
-            {
-                CreateFolder(Program.settings.Value.HeadMeshOutput + "\\meshes\\actors\\character\\FaceGenData\\FaceGeom\\Skyrim.esm");
-                CreateFolder(Program.settings.Value.HeadMeshOutput + "\\meshes\\actors\\character\\FaceGenData\\FaceGeom\\Dawnguard.esm");
-                CreateFolder(Program.settings.Value.HeadMeshOutput + "\\meshes\\actors\\character\\FaceGenData\\FaceGeom\\HearthFires.esm");
-                CreateFolder(Program.settings.Value.HeadMeshOutput + "\\meshes\\actors\\character\\FaceGenData\\FaceGeom\\Dragonborn.esm");
-            }
+            HashSet<string> skipMods = Program.settings.Value.ModsToSkip.Split(";").Select(s => s.Trim()).ToHashSet();
             
             foreach (INpcGetter record in mod.Npcs)
             {
@@ -76,62 +70,68 @@ namespace BijinAIOPathcer.Patchers
                     armor.BodyTemplate!.FirstPersonFlags |= BipedObjectFlag.Hair;
                     armor.Armature.Add(new FormLink<IArmorAddonGetter>(new FormKey(state.PatchMod.ModKey, hair.FormKey.ID)));
 
-                    if (Program.settings.Value.UseYourSkin)
-                    {
-                        string fileName = record.FormKey.IDString().PadLeft(8, '0');
-                        string modName = record.FormKey.ModKey.ToString();
-                        string filePath = "";
-                        if (modName.Equals("Skyrim.esm"))
-                        {
-                            filePath = "actors\\character\\FaceGenData\\FaceGeom\\Skyrim.esm\\" + fileName + ".nif";
+                    //if (Program.settings.Value.UseYourSkin)
+                    //{
+                    //    string fileName = record.FormKey.IDString().PadLeft(8, '0');
+                    //    string modName = record.FormKey.ModKey.ToString();
+                    //    string filePath = "";
+                    //    if (modName.Equals("Skyrim.esm"))
+                    //    {
+                    //        filePath = "actors\\character\\FaceGenData\\FaceGeom\\Skyrim.esm\\" + fileName + ".nif";
 
-                        }
-                        else if (modName.Equals("Dawnguard.esm"))
-                        {
-                            filePath = "actors\\character\\FaceGenData\\FaceGeom\\Dawnguard.esm\\" + fileName + ".nif";
-                        }
-                        else if (modName.Equals("HearthFires.esm"))
-                        {
-                            filePath = "actors\\character\\FaceGenData\\FaceGeom\\HearthFires.esm\\" + fileName + ".nif";
-                        }
-                        else if (modName.Equals("Dragonborn.esm"))
-                        {
-                            filePath = "actors\\character\\FaceGenData\\FaceGeom\\Dragonborn.esm\\" + fileName + ".nif";
-                        }
+                    //    }
+                    //    else if (modName.Equals("Dawnguard.esm"))
+                    //    {
+                    //        filePath = "actors\\character\\FaceGenData\\FaceGeom\\Dawnguard.esm\\" + fileName + ".nif";
+                    //    }
+                    //    else if (modName.Equals("HearthFires.esm"))
+                    //    {
+                    //        filePath = "actors\\character\\FaceGenData\\FaceGeom\\HearthFires.esm\\" + fileName + ".nif";
+                    //    }
+                    //    else if (modName.Equals("Dragonborn.esm"))
+                    //    {
+                    //        filePath = "actors\\character\\FaceGenData\\FaceGeom\\Dragonborn.esm\\" + fileName + ".nif";
+                    //    }
 
-                        if (!File.Exists(Constants.BasePath + filePath))
-                        {
-                            Console.WriteLine($"Could not find {filePath}. Skipping.");
-                            continue;
-                        }
-                        NifFile nifFile = new();
-                        nifFile.Load(Constants.BasePath + filePath);
-                        BSDynamicTriShape shape = nifFile.FindBlockByName<BSDynamicTriShape>(npcName + "HeadHP");
-                        if (shape == null)
-                        {
-                            continue;
-                        }
-                        BSLightingShaderProperty shaderProperty = (BSLightingShaderProperty)nifFile.GetBlock(shape.ShaderPropertyRef);
-                        BSShaderTextureSet textureSet = nifFile.GetBlock(shaderProperty.TextureSetRef);
+                    //    if (!File.Exists(Constants.BasePath + filePath))
+                    //    {
+                    //        Console.WriteLine($"Could not find {filePath}. Skipping.");
+                    //        continue;
+                    //    }
+                    //    NifFile nifFile = new();
+                    //    nifFile.Load(Constants.BasePath + filePath);
+                    //    BSDynamicTriShape shape = nifFile.FindBlockByName<BSDynamicTriShape>(npcName + "HeadHP");
+                    //    if (shape == null)
+                    //    {
+                    //        continue;
+                    //    }
+                    //    BSLightingShaderProperty shaderProperty = (BSLightingShaderProperty)nifFile.GetBlock(shape.ShaderPropertyRef);
+                    //    BSShaderTextureSet textureSet = nifFile.GetBlock(shaderProperty.TextureSetRef);
 
-                        textureSet.Textures[0].Content = "textures\\actors\\character\\female\\FemaleHead.dds";
-                        textureSet.Textures[2].Content = "textures\\actors\\character\\female\\FemaleHead_sk.dds";
-                        textureSet.Textures[7].Content = "textures\\actors\\character\\female\\FemaleHead_S.dds";
-                        if (Program.settings.Value.UseYourSkinNormalMap)
-                        {
-                            textureSet.Textures[1].Content = "textures\\actors\\character\\female\\FemaleHead_msn.dds";
-                        }
-                        string path = Program.settings.Value.HeadMeshOutput.TrimEnd('\\') + "\\meshes\\" + filePath;
-                        nifFile.Save(path, Constants.SaveOptions);
-                    }
+                    //    textureSet.Textures[0].Content = "textures\\actors\\character\\female\\FemaleHead.dds";
+                    //    textureSet.Textures[2].Content = "textures\\actors\\character\\female\\FemaleHead_sk.dds";
+                    //    textureSet.Textures[7].Content = "textures\\actors\\character\\female\\FemaleHead_S.dds";
+                    //    if (Program.settings.Value.UseYourSkinNormalMap)
+                    //    {
+                    //        textureSet.Textures[1].Content = "textures\\actors\\character\\female\\FemaleHead_msn.dds";
+                    //    }
+                    //    string path = Program.settings.Value.HeadMeshOutput.TrimEnd('\\') + "\\meshes\\" + filePath;
+                    //    nifFile.Save(path, Constants.SaveOptions);
+                    //}
 
                     if (linkCacheConnectedToLoadOrder.TryResolve(record.FormKey, out var winningRecord)){
+                        if (skipMods.Contains(winningRecord.FormKey.ModKey.FileName)) {
+                            continue;
+                        }
                         Npc winningNpc = state.PatchMod.Npcs.GetOrAddAsOverride(winningRecord);
                         if (!winningNpc.Equals(record))
                         {
-                            winningNpc.WornArmor = wornArmor.AsNullable();
-                            winningNpc.HeadParts.Clear();
-                            winningNpc.HeadParts.AddRange(record.HeadParts);
+                            var mask = new Npc.TranslationMask(defaultOn: false)
+                            {
+                                WornArmor = true,
+                                HeadParts = true
+                            };
+                            winningNpc.DeepCopyIn(record, mask);
                         }
 
                         if (npcName.Equals("Jenassa"))
@@ -216,49 +216,52 @@ namespace BijinAIOPathcer.Patchers
                     Npc winningNpc = state.PatchMod.Npcs.GetOrAddAsOverride(winningRecord);
                     if (!winningNpc.Equals(record))
                     {
-                        winningNpc.WornArmor = wornArmor.AsNullable();
-                        winningNpc.HeadParts.Clear();
-                        winningNpc.HeadParts.AddRange(record.HeadParts);
+                        var mask = new Npc.TranslationMask(defaultOn: false)
+                        {
+                            WornArmor = true,
+                            HeadParts = true
+                        };
+                        winningNpc.DeepCopyIn(record, mask);
                     }
                     state.PatchMod.Colors.Add(hairColor);
                     winningNpc.HairColor = hairColor.ToNullableLink();
                 }
                 
 
-                if (Program.settings.Value.UseHighPolyHead)
-                {
-                    if (Program.settings.Value.UseYourSkin)
-                    {
-                        string fileName = record.FormKey.IDString().PadLeft(8, '0');
-                        string modName = record.FormKey.ModKey.ToString();
-                        string filePath = "actors\\character\\FaceGenData\\FaceGeom\\Dawnguard.esm\\" + fileName + ".nif";
+                //if (Program.settings.Value.UseHighPolyHead)
+                //{
+                //    if (Program.settings.Value.UseYourSkin)
+                //    {
+                //        string fileName = record.FormKey.IDString().PadLeft(8, '0');
+                //        string modName = record.FormKey.ModKey.ToString();
+                //        string filePath = "actors\\character\\FaceGenData\\FaceGeom\\Dawnguard.esm\\" + fileName + ".nif";
 
-                        if (!File.Exists(Constants.BasePath + filePath))
-                        {
-                            Console.WriteLine($"Could not find {filePath}. Skipping.");
-                            return;
-                        }
-                        NifFile nifFile = new();
-                        nifFile.Load(Constants.BasePath + filePath);
-                        BSDynamicTriShape shape = nifFile.FindBlockByName<BSDynamicTriShape>(npcName + "HeadHP");
-                        if (shape == null)
-                        {
-                            return;
-                        }
-                        BSLightingShaderProperty shaderProperty = (BSLightingShaderProperty)nifFile.GetBlock(shape.ShaderPropertyRef);
-                        BSShaderTextureSet textureSet = nifFile.GetBlock(shaderProperty.TextureSetRef);
+                //        if (!File.Exists(Constants.BasePath + filePath))
+                //        {
+                //            Console.WriteLine($"Could not find {filePath}. Skipping.");
+                //            return;
+                //        }
+                //        NifFile nifFile = new();
+                //        nifFile.Load(Constants.BasePath + filePath);
+                //        BSDynamicTriShape shape = nifFile.FindBlockByName<BSDynamicTriShape>(npcName + "HeadHP");
+                //        if (shape == null)
+                //        {
+                //            return;
+                //        }
+                //        BSLightingShaderProperty shaderProperty = (BSLightingShaderProperty)nifFile.GetBlock(shape.ShaderPropertyRef);
+                //        BSShaderTextureSet textureSet = nifFile.GetBlock(shaderProperty.TextureSetRef);
 
-                        textureSet.Textures[0].Content = "textures\\actors\\character\\female\\FemaleHead.dds";
-                        textureSet.Textures[2].Content = "textures\\actors\\character\\female\\FemaleHead_sk.dds";
-                        textureSet.Textures[7].Content = "textures\\actors\\character\\female\\FemaleHead_S.dds";
-                        if (Program.settings.Value.UseYourSkinNormalMap)
-                        {
-                            textureSet.Textures[1].Content = "textures\\actors\\character\\female\\FemaleHead_msn.dds";
-                        }
-                        string path = Program.settings.Value.HeadMeshOutput.TrimEnd('\\') + "\\meshes\\" + filePath;
-                        nifFile.Save(path, Constants.SaveOptions);
-                    }
-                }
+                //        textureSet.Textures[0].Content = "textures\\actors\\character\\female\\FemaleHead.dds";
+                //        textureSet.Textures[2].Content = "textures\\actors\\character\\female\\FemaleHead_sk.dds";
+                //        textureSet.Textures[7].Content = "textures\\actors\\character\\female\\FemaleHead_S.dds";
+                //        if (Program.settings.Value.UseYourSkinNormalMap)
+                //        {
+                //            textureSet.Textures[1].Content = "textures\\actors\\character\\female\\FemaleHead_msn.dds";
+                //        }
+                //        string path = Program.settings.Value.HeadMeshOutput.TrimEnd('\\') + "\\meshes\\" + filePath;
+                //        nifFile.Save(path, Constants.SaveOptions);
+                //    }
+                //}
             }
         }
 
@@ -296,48 +299,51 @@ namespace BijinAIOPathcer.Patchers
                 armor.BodyTemplate!.FirstPersonFlags |= BipedObjectFlag.Hair;
                 armor.Armature.Add(new FormLink<IArmorAddonGetter>(new FormKey(state.PatchMod.ModKey, hair.FormKey.ID)));
 
-                if (Program.settings.Value.UseHighPolyHead)
-                {
-                    if (Program.settings.Value.UseYourSkin)
-                    {
-                        string fileName = record.FormKey.IDString().PadLeft(8, '0');
-                        string modName = record.FormKey.ModKey.ToString();
-                        string filePath = "actors\\character\\FaceGenData\\FaceGeom\\Dawnguard.esm\\" + fileName + ".nif";
+                //if (Program.settings.Value.UseHighPolyHead)
+                //{
+                //    if (Program.settings.Value.UseYourSkin)
+                //    {
+                //        string fileName = record.FormKey.IDString().PadLeft(8, '0');
+                //        string modName = record.FormKey.ModKey.ToString();
+                //        string filePath = "actors\\character\\FaceGenData\\FaceGeom\\Dawnguard.esm\\" + fileName + ".nif";
 
-                        if (!File.Exists(Constants.BasePath + filePath))
-                        {
-                            Console.WriteLine($"Could not find {filePath}. Skipping.");
-                            return;
-                        }
-                        NifFile nifFile = new();
-                        nifFile.Load(Constants.BasePath + filePath);
-                        BSDynamicTriShape shape = nifFile.FindBlockByName<BSDynamicTriShape>(npcName + "HeadHP");
-                        if (shape == null)
-                        {
-                            return;
-                        }
-                        BSLightingShaderProperty shaderProperty = (BSLightingShaderProperty)nifFile.GetBlock(shape.ShaderPropertyRef);
-                        BSShaderTextureSet textureSet = nifFile.GetBlock(shaderProperty.TextureSetRef);
+                //        if (!File.Exists(Constants.BasePath + filePath))
+                //        {
+                //            Console.WriteLine($"Could not find {filePath}. Skipping.");
+                //            return;
+                //        }
+                //        NifFile nifFile = new();
+                //        nifFile.Load(Constants.BasePath + filePath);
+                //        BSDynamicTriShape shape = nifFile.FindBlockByName<BSDynamicTriShape>(npcName + "HeadHP");
+                //        if (shape == null)
+                //        {
+                //            return;
+                //        }
+                //        BSLightingShaderProperty shaderProperty = (BSLightingShaderProperty)nifFile.GetBlock(shape.ShaderPropertyRef);
+                //        BSShaderTextureSet textureSet = nifFile.GetBlock(shaderProperty.TextureSetRef);
 
-                        textureSet.Textures[0].Content = "textures\\actors\\character\\female\\FemaleHead.dds";
-                        textureSet.Textures[2].Content = "textures\\actors\\character\\female\\FemaleHead_sk.dds";
-                        textureSet.Textures[7].Content = "textures\\actors\\character\\female\\FemaleHead_S.dds";
-                        if (Program.settings.Value.UseYourSkinNormalMap)
-                        {
-                            textureSet.Textures[1].Content = "textures\\actors\\character\\female\\FemaleHead_msn.dds";
-                        }
-                        string path = Program.settings.Value.HeadMeshOutput.TrimEnd('\\') + "\\meshes\\" + filePath;
-                        nifFile.Save(path, Constants.SaveOptions);
-                    }
-                }
+                //        textureSet.Textures[0].Content = "textures\\actors\\character\\female\\FemaleHead.dds";
+                //        textureSet.Textures[2].Content = "textures\\actors\\character\\female\\FemaleHead_sk.dds";
+                //        textureSet.Textures[7].Content = "textures\\actors\\character\\female\\FemaleHead_S.dds";
+                //        if (Program.settings.Value.UseYourSkinNormalMap)
+                //        {
+                //            textureSet.Textures[1].Content = "textures\\actors\\character\\female\\FemaleHead_msn.dds";
+                //        }
+                //        string path = Program.settings.Value.HeadMeshOutput.TrimEnd('\\') + "\\meshes\\" + filePath;
+                //        nifFile.Save(path, Constants.SaveOptions);
+                //    }
+                //}
                 if (linkCacheConnectedToLoadOrder.TryResolve(record.FormKey, out var winningRecord))
                 {
                     Npc winningNpc = state.PatchMod.Npcs.GetOrAddAsOverride(winningRecord);
                     if (!winningNpc.Equals(record))
                     {
-                        winningNpc.WornArmor = wornArmor.AsNullable();
-                        winningNpc.HeadParts.Clear();
-                        winningNpc.HeadParts.AddRange(record.HeadParts);
+                        var mask = new Npc.TranslationMask(defaultOn: false)
+                        {
+                            WornArmor = true,
+                            HeadParts = true
+                        };
+                        winningNpc.DeepCopyIn(record, mask);
                     }
                 }
             }

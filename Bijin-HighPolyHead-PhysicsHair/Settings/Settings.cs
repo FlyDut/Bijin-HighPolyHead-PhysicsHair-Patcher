@@ -9,21 +9,21 @@ namespace BijinAIOPathcer.Settings
 
         public bool UseYourBodyMesh { get; set; } = false;
 
-        public bool UseYourSkin { get; set; } = false;
+        public bool UseYourBodySkin { get; set; } = false;
 
-        [SynthesisTooltip("Use Your Skin Normal Map: Effective when Use Your Skin is enabled")]
-        [SynthesisDescription("Use Your Skin Normal Map: Effective when Use Your Skin is enabled")]
-        public bool UseYourSkinNormalMap { get; set; } = false;
-        
-        [SynthesisTooltip("Head Mesh Output: Effective when UseYourSkin is enabled, it modifies FaceGen to match your skin textures.")]
-        [SynthesisDescription("Head Mesh Output: Effective when UseYourSkin is enabled, it modifies FaceGen to match your skin textures.")]
-        public string HeadMeshOutput { get; set; } = "";
+        //[SynthesisTooltip("Use Your Skin Normal Map: Effective when Use Your Skin is enabled")]
+        //[SynthesisDescription("Use Your Skin Normal Map: Effective when Use Your Skin is enabled")]
+        //public bool UseYourBodySkinNormalMap { get; set; } = false;
 
         [SynthesisTooltip("When you do not check this option, it will use the color of the \"Hi babe\" hairstyle by default.")]
         [SynthesisDescription("When you do not check this option, it will use the color of the \"Hi babe\" hairstyle by default.")]
         public AdrianneOption Adrianne = new();
 
         public ValericaOption Valerica = new();
+
+        [SynthesisTooltip("separate esps with a semicolon (;)")]
+        [SynthesisDescription("separate esps with a semicolon (;)")]
+        public string ModsToSkip { get; set; } = "";
     }
 
     public class AdrianneOption
